@@ -63,6 +63,10 @@ body {
     gap: 50px;
 }
 
+.header-burger {
+    display: none;
+}
+
 .menu-item {
     position: relative;
 }
@@ -151,7 +155,7 @@ body {
     font-weight: 900;
     line-height: 60px;
     text-transform: uppercase;
-    width: 700px;
+    max-width: 700px;
     margin-bottom: 30px;
 }
 
@@ -167,7 +171,7 @@ body {
 .about-cards {
     display: flex;
     gap: 30px;
-    height: 251px;
+    flex-wrap: wrap;
 }
 
 .about-card-title {
@@ -232,7 +236,7 @@ flex: 1 1 30%;
 }
 
 .do-card-img {
-width: 100%;
+max-width: 100%;
 height: 294px;
 object-fit: cover;
 }
@@ -244,11 +248,11 @@ object-fit: cover;
 }
 
 .team-title {
-        margin-bottom: 50px;
-        text-align: center;
-        font-family: 'Roboto';
-        font-weight: 700;
-        font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
 }
 
 .team-members {
@@ -270,17 +274,17 @@ object-fit: cover;
 }
 
 .member img {
-    width: 100%;
+    max-width: 100%;
     height: 260px;
     object-fit: cover;
     border-radius: 4px;
 }
 
 .member h4 {
-        font-family: 'Roboto';
-        font-weight: 500;
-        font-size: 16px;
-        margin: 0 0 18;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 18;
 }
 
 .member p {
@@ -299,7 +303,7 @@ object-fit: cover;
 
 .team-icn {
     display: block;
-    width: 20px;
+    max-width: 20px;
     height: 20px;
     fill: #AFB1B8;
     transition: all .3s linear;
@@ -341,7 +345,7 @@ object-fit: cover;
 
 .customer-icn{
     fill: #AFB1B8;
-    width: 106px;
+    max-width: 106px;
     height: 60px;
     transition: all .3s linear;
 }
@@ -410,7 +414,7 @@ footer {
 
 .footer-container {
     display: flex;
-    width: 100%;
+    max-width: 100%;
     gap: 50px;
 }
 
@@ -418,51 +422,30 @@ footer {
     display: flex;
     flex-flow: column;
     gap: 20px;
+    text-align: center;
 }
 
 .svg-footer {
     padding: 10px 70px;
 }
+
 .footer-icons {
     display: flex;
     gap: 20px;
+    text-align: center;
 }
 
 .footer-icn {
     display: block;
-    width: 20px;
+    max-width: 20px;
     height: 20px;
     fill: white;
     transition: all .3s linear;
 }
 
 .footer-icn:hover {
-    fill: rgb(131, 131, 236);
+    fill: rgb(26, 99, 55);
 }
-
-
-
-
-/*
-.footer-icons li a {
-    display: block;
-    width: 44px;
-    height: 44px;
-}
-background: url(../img//instagram-1-footer.svg) no-repeat 50%/44px;
-
-.footer-icons li:nth-child(2) a {
-    background: url(../img/twitter-footer.svg) no-repeat 50%/44px;
-}
-
-.footer-icons li:nth-child(3) a {
-    background: url(../img/facebook-footer.svg) no-repeat 50%/44px;
-}
-
-.footer-icons li:nth-child(4) a {
-    background: url(../img/linkedin-footer.svg) no-repeat 50%/44px;
-}
-*/
 
 .icon-title {
     font-family: 'Roboto';
@@ -476,7 +459,7 @@ a {
 }
 
 img {
-    width: 145px;
+    max-width: 145px;
 }
 
 a, p {
@@ -541,8 +524,8 @@ a, p {
 
 .portfolio-img img {
     display: block;
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 294px;
 }
 
 .card-text {
@@ -581,4 +564,184 @@ p {
 
 .card:hover .cards-title {
     opacity: 1;
+}
+
+@media screen and (max-width: 992px) {
+    .title {
+        font-style: 28px;
+    }
+
+    .header-logo {
+        margin-right: 30px;
+    }
+
+    .header-list, .header-contacts {
+        gap: 20px;
+    }
+
+    .hero {
+        height: 450px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .about {
+        padding: 40px 0;
+    }
+
+    .about-cards {
+        row-gap: 30px;
+    }
+
+    .about-card {
+        flex-basis: 33.333%;
+    }
+
+    .activities {
+        padding-bottom: 40px;
+    }
+
+    .do-title {
+        margin-bottom: 30px;
+    }
+
+    .do-card {
+        flex: 1 1 45%;
+    }
+
+    .do-card-img {
+        height: 225px;
+    }
+
+    .team {
+        padding: 40px 0;
+    }
+
+    .team-title {
+        margin-bottom: 30px;
+    }
+
+    .team-members {
+        flex-flow: wrap;
+    }
+
+    .member {
+        flex: 1 1 45%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .header-list,
+    .header-contacts {
+        display: none;
+    }
+
+    .header-burger {
+        display: block;
+        width: 40px;
+        height: 24px;
+        margin-left: auto;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .header-burger::before,
+    .header-burger::after,
+    span {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: #3498db;
+    }
+
+    .header-burger::after {
+        top: auto;
+        bottom: 0;
+    }
+
+    span {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-title {
+        font-size: 26px;
+        margin-bottom: 10px;
+        line-height: 42px;
+    }
+
+    .member img {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .customers {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .about-card {
+        flex-basis: 100%;
+    }
+
+    .about-card-title {
+        text-align: center;
+        
+    } 
+
+    .activities {
+        display: none;
+    }
+
+    .customers {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .menu-container {
+        text-align: left;
+    }
+
+    .menu-btn {
+        margin: 15px;
+        font-size: 16px;
+    }
+
+    .cards {
+        flex-flow: wrap;
+    }
+
+    .card {
+        flex: 1 1 50%;
+        margin: 15px 0;
+    }
+
+    .portfolio-img img {
+        width: 100%;
+    }
+
+    .cards-title {
+        margin: 15px 0;
+    }
 }
